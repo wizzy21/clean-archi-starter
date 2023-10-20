@@ -9,3 +9,4 @@ export default class SearchMentoringSlotsService {
     return await this.pauseRepository.searchMentoringSlots(searchFilters);
   }
 }
+

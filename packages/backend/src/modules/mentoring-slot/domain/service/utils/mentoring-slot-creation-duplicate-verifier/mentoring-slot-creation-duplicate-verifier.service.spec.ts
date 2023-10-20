@@ -31,4 +31,7 @@ describe('verify mentoring slot duplicate on creation', () => {
 
     await expect(mentoringSlotCreationValidatorService.verifyDuplicates(createMentoringSlotInput)).resolves.not.toThrow(Exception);
   });
+
+
+  // Test for getMentoringSlotsByMissed
 });

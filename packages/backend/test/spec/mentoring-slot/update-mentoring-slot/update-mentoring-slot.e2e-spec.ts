@@ -27,7 +27,7 @@ describe('Update MentoringSlot Category (e2e)', () => {
     app = await givenExistingApp(app);
     connection = await givenExistingDbConnection();
 
-    const mentoringSlotBuild = mentoringSlotBuilder()
+   const mentoringSlotBuild = mentoringSlotBuilder()
       .withStartDate('2023-11-22T09:00:00.000Z')
       .withEndDate('2023-11-22T11:00:00.000Z')
 
@@ -65,4 +65,5 @@ describe('Update MentoringSlot Category (e2e)', () => {
   afterAll(async () => {
     await cleanApp(app, connection);
   });
+
 });
