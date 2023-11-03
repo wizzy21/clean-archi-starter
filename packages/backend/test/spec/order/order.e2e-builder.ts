@@ -2,7 +2,7 @@ import { OrderStatusEnum } from "@src/modules/order/domain/model/const/order-sta
 import { OrderRepositoryInterface } from "@src/modules/order/domain/port/db/order.repository.interface";
 
 
-const CreateOrderDtoInterface: OrderRepositoryDtoInterface = {
+const CreateOrderDtoInterface: OrderRepositoryInterface = {
   customer: "Jasmine",
   products: ["Limbo", "Chevrolet"],
 };

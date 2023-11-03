@@ -1,9 +1,8 @@
 import { NestExpressApplication } from '@nestjs/platform-express';
-import { givenExistingApp } from '@test/utils/fixture/shared/app/app.fixture';
-import { givenExistingDbConnection } from '@test/utils/fixture/shared/db-connection/db-connection.fixture';
 import DataSource from '@src/modules/database/config/typeorm.config';
 import request from 'supertest';
-import { cleanApp } from '@test/utils/fixture/shared/app/clean-app';
+//import { DataSource } from 'typeorm';
+
 
 describe('Get Orders', () => {
   let app: NestExpressApplication;
@@ -34,3 +33,15 @@ describe('Get Orders', () => {
     await cleanApp(app, connection);
   });
 });
+function givenExistingDbConnection(): import("typeorm").DataSource | PromiseLike<import("typeorm").DataSource> {
+  throw new Error('Function not implemented.');
+}
+
+function givenExistingApp(app: NestExpressApplication<import("http").Server<typeof import("http").IncomingMessage, typeof import("http").ServerResponse>>): NestExpressApplication<import("http").Server<typeof import("http").IncomingMessage, typeof import("http").ServerResponse>> | PromiseLike<NestExpressApplication<import("http").Server<typeof import("http").IncomingMessage, typeof import("http").ServerResponse>>> {
+  throw new Error('Function not implemented.');
+}
+
+function cleanApp(app: NestExpressApplication<import("http").Server<typeof import("http").IncomingMessage, typeof import("http").ServerResponse>>, connection: DataSource) {
+  throw new Error('Function not implemented.');
+}
+

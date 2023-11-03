@@ -8,10 +8,7 @@ describe('Get Orders after specified date', () => {
   let app: NestExpressApplication;
   let connection: typeof DataSource;
 
-  // beforeAll est fonction mise à dispo par Vitest (framework de test)
-  // qui sera executée avant tous les tests
-  // permet de créer l'application et la connection à la base de données
-  // et les stocker dans des variables globales (dispos pour tous les tests de ce fichier)
+ 
   beforeAll(async () => {
     app = await givenExistingApp(app);
     connection = await givenExistingDbConnection();

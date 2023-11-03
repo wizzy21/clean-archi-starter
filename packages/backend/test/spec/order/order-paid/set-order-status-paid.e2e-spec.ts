@@ -1,4 +1,5 @@
 import { NestExpressApplication } from '@nestjs/platform-express';
+//import DataSource from '@src/modules/database/config/typeorm.config';
 import request from 'supertest';
 import { randomUUID } from 'crypto';
 import { orderBuilder } from '../order.e2e-builder';
@@ -35,7 +36,7 @@ describe('Set Order status paid', () => {
   });
 
   afterAll(async () => {
-    await cleanApp(app, connection);
+    return cleanApp(app, connection);
   });
 });
 function givenExistingDbConnection(): import("typeorm").DataSource | PromiseLike<import("typeorm").DataSource> {
